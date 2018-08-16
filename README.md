@@ -22,6 +22,8 @@ class AwesomeCell: UICollectionViewCell {
 
 Is this a good idea to resolve the performance issue? 🤔
 
+(`cell` is a sigleton)
+
 ```swift
 let image = UIGraphicsImageRenderer(bounds: bounds).image { context in
     cell.configure(with: data)
