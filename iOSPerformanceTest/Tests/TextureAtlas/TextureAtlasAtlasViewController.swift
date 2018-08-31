@@ -17,7 +17,7 @@ class TextureAtlasAtlasViewController: UICollectionViewController {
         collectionView?.register(ImageCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView?.isPrefetchingEnabled = false
 
-        measure(title: "texture atlas") {
+        measure {
             items = IconGenerator.makeIconsFromTextureAtlas()
         }
     }

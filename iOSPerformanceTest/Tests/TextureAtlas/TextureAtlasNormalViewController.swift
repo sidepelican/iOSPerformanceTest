@@ -17,7 +17,7 @@ class TextureAtlasNormalViewController: UICollectionViewController {
         collectionView?.register(ImageCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView?.isPrefetchingEnabled = false
 
-        measure(title: "normal") {
+        measure {
             items = IconGenerator.makeIcons()
         }
     }

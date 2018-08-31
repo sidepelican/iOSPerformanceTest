@@ -22,6 +22,7 @@
 		37EE57AC21396C4A007D1607 /* TextureAtlasNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE57AB21396C4A007D1607 /* TextureAtlasNormalViewController.swift */; };
 		37EE57AE21396C51007D1607 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE57AD21396C51007D1607 /* Icon.swift */; };
 		37EE57B021396C57007D1607 /* icons.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 37EE57AF21396C57007D1607 /* icons.atlas */; };
+		93821EFE0B972627A8E18B20 /* Pods_iOSPerformanceTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,9 @@
 		37EE57AD21396C51007D1607 /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		37EE57AF21396C57007D1607 /* icons.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = icons.atlas; sourceTree = "<group>"; };
 		37EE57B221396E2D007D1607 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		53A0CB7441921F5242B6D106 /* Pods-iOSPerformanceTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.debug.xcconfig"; sourceTree = "<group>"; };
+		A17C173C7B28BED0F75C65A3 /* Pods-iOSPerformanceTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.release.xcconfig"; sourceTree = "<group>"; };
+		B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPerformanceTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93821EFE0B972627A8E18B20 /* Pods_iOSPerformanceTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,7 @@
 				37EE578721396610007D1607 /* iOSPerformanceTest */,
 				37EE578621396610007D1607 /* Products */,
 				37EE57B121396E2D007D1607 /* Frameworks */,
+				8F01E09185020AD7A4CE7C4B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				37EE57B221396E2D007D1607 /* SpriteKit.framework */,
+				B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +159,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8F01E09185020AD7A4CE7C4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53A0CB7441921F5242B6D106 /* Pods-iOSPerformanceTest.debug.xcconfig */,
+				A17C173C7B28BED0F75C65A3 /* Pods-iOSPerformanceTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37EE579721396611007D1607 /* Build configuration list for PBXNativeTarget "iOSPerformanceTest" */;
 			buildPhases = (
+				F864239172431F27200C14C0 /* [CP] Check Pods Manifest.lock */,
 				37EE578121396610007D1607 /* Sources */,
 				37EE578221396610007D1607 /* Frameworks */,
 				37EE578321396610007D1607 /* Resources */,
+				24430269CB6011EC60F4B4BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +236,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24430269CB6011EC60F4B4BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F864239172431F27200C14C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSPerformanceTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37EE578121396610007D1607 /* Sources */ = {
@@ -376,13 +433,14 @@
 		};
 		37EE579821396611007D1607 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53A0CB7441921F5242B6D106 /* Pods-iOSPerformanceTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = R3M694BK62;
 				GCC_OPTIMIZATION_LEVEL = s;
-				INFOPLIST_FILE = iOSPerformanceTest/Info.plist;
+				INFOPLIST_FILE = iOSPerformanceTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,12 +454,13 @@
 		};
 		37EE579921396611007D1607 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A17C173C7B28BED0F75C65A3 /* Pods-iOSPerformanceTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = R3M694BK62;
-				INFOPLIST_FILE = iOSPerformanceTest/Info.plist;
+				INFOPLIST_FILE = iOSPerformanceTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
