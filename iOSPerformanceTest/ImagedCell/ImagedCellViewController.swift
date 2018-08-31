@@ -2,11 +2,19 @@ import UIKit
 
 private let items = (1...200).map(String.init)
 
-class DelayViewController: UICollectionViewController {
+class ImagedCellViewController: UICollectionViewController {
+    init() {
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView?.register(DelayedCell<Cell>.self, forCellWithReuseIdentifier: "Delay")
+        collectionView?.register(LabelCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView?.isPrefetchingEnabled = false
     }
 
@@ -15,7 +23,7 @@ class DelayViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Delay", for: indexPath) as! DelayedCell<Cell>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! LabelCell
         cell.configure(with: items[indexPath.row])
         return cell
     }
@@ -24,3 +32,4 @@ class DelayViewController: UICollectionViewController {
         return 1
     }
 }
+
