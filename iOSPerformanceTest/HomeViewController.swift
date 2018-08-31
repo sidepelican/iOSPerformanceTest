@@ -3,6 +3,15 @@ import UIKit
 private struct Page {
     let title: String
     let makeViewController: () -> UIViewController
+
+    static func make<T: UIViewController>(from type: T.Type) -> Page {
+        let className = String(describing: type)
+        let title = className
+            .replacingOccurrences(of: "ViewController", with: "")
+            .replacingOccurrences(of: "[A-Z]{3}", with: "", options: .regularExpression)
+
+        return Page(title: title, makeViewController: type.init)
+    }
 }
 
 private struct Section {
@@ -17,13 +26,14 @@ class HomeViewController: UITableViewController {
         super.viewDidLoad()
 
         sections = [
-            Section(headerTitle: "ImagedCell", pages: [
-                Page(title: "normal", makeViewController: ImagedCellViewController.init),
-                Page(title: "imaged", makeViewController: DelayImagedCellViewController.init),
+            Section(headerTitle: "SlowInitializedCell", pages: [
+                Page.make(from: SICNormalViewController.self),
+                Page.make(from: SICImagedViewController.self),
             ]),
-            Section(headerTitle: "TextureAtlas", pages: [
-                Page(title: "normal", makeViewController: TextureAtlasNormalViewController.init),
-                Page(title: "atlas", makeViewController: TextureAtlasAtlasViewController.init),
+            Section(headerTitle: "LoadSmallImages", pages: [
+                Page.make(from: LSINormalViewController.self),
+                Page.make(from: LSILazySetViewController.self),
+                Page.make(from: LSITextureAtlasViewController.self),
             ]),
         ]
     }

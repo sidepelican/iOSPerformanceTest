@@ -1,8 +1,8 @@
 import UIKit
 
-private let items = (1...200).map(String.init)
+class LSINormalViewController: UICollectionViewController {
+    private var items: [Icon] = []
 
-class ImagedCellViewController: UICollectionViewController {
     init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
@@ -14,8 +14,12 @@ class ImagedCellViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView?.register(LabelCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView?.register(ImageCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView?.isPrefetchingEnabled = false
+
+        measure {
+            items = IconGenerator.makeIcons()
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,8 +27,8 @@ class ImagedCellViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! LabelCell
-        cell.configure(with: items[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageCell
+        cell.imageView.image = items[indexPath.row].image
         return cell
     }
 
@@ -32,4 +36,3 @@ class ImagedCellViewController: UICollectionViewController {
         return 1
     }
 }
-

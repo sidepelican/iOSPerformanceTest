@@ -1,6 +1,6 @@
 import UIKit
 
-class TextureAtlasNormalViewController: UICollectionViewController {
+class LSILazySetViewController: UICollectionViewController {
     private var items: [Icon] = []
 
     init() {
@@ -18,7 +18,12 @@ class TextureAtlasNormalViewController: UICollectionViewController {
         collectionView?.isPrefetchingEnabled = false
 
         measure {
-            items = IconGenerator.makeIcons()
+            DispatchQueue.global().async {
+                self.items = IconGenerator.makeIcons()
+                DispatchQueue.main.async {
+                    self.collectionView?.reloadData()
+                }
+            }
         }
     }
 

@@ -1,8 +1,8 @@
 import UIKit
 
-class TextureAtlasAtlasViewController: UICollectionViewController {
-    private var items: [Icon] = []
+private let items = (1...200).map(String.init)
 
+class SICNormalViewController: LayoutMeasureCollectionViewConroller {
     init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
@@ -14,12 +14,8 @@ class TextureAtlasAtlasViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView?.register(ImageCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView?.register(LabelCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView?.isPrefetchingEnabled = false
-
-        measure {
-            items = IconGenerator.makeIconsFromTextureAtlas()
-        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -27,8 +23,8 @@ class TextureAtlasAtlasViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageCell
-        cell.imageView.image = items[indexPath.row].image
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! LabelCell
+        cell.configure(with: items[indexPath.row])
         return cell
     }
 
@@ -36,3 +32,4 @@ class TextureAtlasAtlasViewController: UICollectionViewController {
         return 1
     }
 }
+

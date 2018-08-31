@@ -2,7 +2,7 @@ import UIKit
 
 private let items = (1...200).map(String.init)
 
-class DelayImagedCellViewController: UICollectionViewController {
+class SICImagedViewController: LayoutMeasureCollectionViewConroller {
     init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
