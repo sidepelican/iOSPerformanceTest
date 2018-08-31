@@ -24,6 +24,11 @@
 		37EE57B021396C57007D1607 /* icons.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 37EE57AF21396C57007D1607 /* icons.atlas */; };
 		37F76995213978B60096D1AE /* LSILazySetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F76994213978B60096D1AE /* LSILazySetViewController.swift */; };
 		37F7699721397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699621397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift */; };
+		37F7699A2139976E0096D1AE /* TagLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F769992139976E0096D1AE /* TagLabelCell.swift */; };
+		37F7699C213997FE0096D1AE /* LSENSStringSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699B213997FE0096D1AE /* LSENSStringSizeViewController.swift */; };
+		37F7699E2139984E0096D1AE /* RandomWordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699D2139984E0096D1AE /* RandomWordGenerator.swift */; };
+		37F769A02139A0C70096D1AE /* LSESizeThatFitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */; };
+		37F769A22139A23F0096D1AE /* LSECacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F769A12139A23F0096D1AE /* LSECacheViewController.swift */; };
 		93821EFE0B972627A8E18B20 /* Pods_iOSPerformanceTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,11 @@
 		37EE57B221396E2D007D1607 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		37F76994213978B60096D1AE /* LSILazySetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSILazySetViewController.swift; sourceTree = "<group>"; };
 		37F7699621397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutMeasureCollectionViewConroller.swift; sourceTree = "<group>"; };
+		37F769992139976E0096D1AE /* TagLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabelCell.swift; sourceTree = "<group>"; };
+		37F7699B213997FE0096D1AE /* LSENSStringSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSENSStringSizeViewController.swift; sourceTree = "<group>"; };
+		37F7699D2139984E0096D1AE /* RandomWordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWordGenerator.swift; sourceTree = "<group>"; };
+		37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSESizeThatFitsViewController.swift; sourceTree = "<group>"; };
+		37F769A12139A23F0096D1AE /* LSECacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSECacheViewController.swift; sourceTree = "<group>"; };
 		53A0CB7441921F5242B6D106 /* Pods-iOSPerformanceTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.debug.xcconfig"; sourceTree = "<group>"; };
 		A17C173C7B28BED0F75C65A3 /* Pods-iOSPerformanceTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.release.xcconfig"; sourceTree = "<group>"; };
 		B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPerformanceTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,8 +130,8 @@
 		37EE57A621396BFA007D1607 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				37EE579D21396692007D1607 /* LabelCell.swift */,
 				37EE57A721396C0C007D1607 /* ImageCell.swift */,
+				37EE579D21396692007D1607 /* LabelCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 			children = (
 				37EE579A2139667D007D1607 /* SlowInitializedCell */,
 				37EE57A321396BCD007D1607 /* LoadSmallImages */,
+				37F769982139963A0096D1AE /* LabelSizeEstimates */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -163,6 +174,18 @@
 				37F7699621397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		37F769982139963A0096D1AE /* LabelSizeEstimates */ = {
+			isa = PBXGroup;
+			children = (
+				37F769992139976E0096D1AE /* TagLabelCell.swift */,
+				37F7699B213997FE0096D1AE /* LSENSStringSizeViewController.swift */,
+				37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */,
+				37F769A12139A23F0096D1AE /* LSECacheViewController.swift */,
+				37F7699D2139984E0096D1AE /* RandomWordGenerator.swift */,
+			);
+			path = LabelSizeEstimates;
 			sourceTree = "<group>";
 		};
 		8F01E09185020AD7A4CE7C4B /* Pods */ = {
@@ -291,13 +314,18 @@
 				37EE579F21396692007D1607 /* SICNormalViewController.swift in Sources */,
 				37EE57AA21396C30007D1607 /* Util.swift in Sources */,
 				37EE578B21396611007D1607 /* HomeViewController.swift in Sources */,
+				37F7699C213997FE0096D1AE /* LSENSStringSizeViewController.swift in Sources */,
 				37EE57A221396692007D1607 /* DelayedCell.swift in Sources */,
 				37EE57A121396692007D1607 /* LabelCell.swift in Sources */,
 				37EE57AE21396C51007D1607 /* Icon.swift in Sources */,
+				37F7699E2139984E0096D1AE /* RandomWordGenerator.swift in Sources */,
 				37F76995213978B60096D1AE /* LSILazySetViewController.swift in Sources */,
+				37F769A22139A23F0096D1AE /* LSECacheViewController.swift in Sources */,
 				37EE57A521396BEC007D1607 /* LSITextureAtlasViewController.swift in Sources */,
+				37F769A02139A0C70096D1AE /* LSESizeThatFitsViewController.swift in Sources */,
 				37EE57A821396C0C007D1607 /* ImageCell.swift in Sources */,
 				37EE57A021396692007D1607 /* SICImagedViewController.swift in Sources */,
+				37F7699A2139976E0096D1AE /* TagLabelCell.swift in Sources */,
 				37EE578921396610007D1607 /* AppDelegate.swift in Sources */,
 				37F7699721397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift in Sources */,
 			);

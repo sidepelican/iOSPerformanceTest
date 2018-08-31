@@ -8,7 +8,7 @@ private struct Page {
         let className = String(describing: type)
         let title = className
             .replacingOccurrences(of: "ViewController", with: "")
-            .replacingOccurrences(of: "[A-Z]{3}", with: "", options: .regularExpression)
+            .replacingOccurrences(of: "^[A-Z]{3}", with: "", options: .regularExpression)
 
         return Page(title: title, makeViewController: type.init)
     }
@@ -34,6 +34,11 @@ class HomeViewController: UITableViewController {
                 Page.make(from: LSINormalViewController.self),
                 Page.make(from: LSILazySetViewController.self),
                 Page.make(from: LSITextureAtlasViewController.self),
+            ]),
+            Section(headerTitle: "LabelSizeEstimates", pages: [
+                Page.make(from: LSENSStringSizeViewController.self),
+                Page.make(from: LSESizeThatFitsViewController.self),
+                Page.make(from: LSECacheViewController.self),
             ]),
         ]
     }
