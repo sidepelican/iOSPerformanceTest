@@ -1,6 +1,6 @@
 import UIKit
 
-class LabelCell: UICollectionViewCell {
+final class LabelCell: UICollectionViewCell {
     private var label: UILabel!
 
     override init(frame: CGRect) {

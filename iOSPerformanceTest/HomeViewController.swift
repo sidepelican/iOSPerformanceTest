@@ -21,9 +21,11 @@ class HomeViewController: UITableViewController {
                 Page(title: "normal", makeViewController: ImagedCellViewController.init),
                 Page(title: "imaged", makeViewController: DelayImagedCellViewController.init),
             ]),
+            Section(headerTitle: "TextureAtlas", pages: [
+                Page(title: "normal", makeViewController: TextureAtlasNormalViewController.init),
+                Page(title: "atlas", makeViewController: TextureAtlasAtlasViewController.init),
+            ]),
         ]
-
-        tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

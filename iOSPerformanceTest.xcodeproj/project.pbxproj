@@ -16,6 +16,12 @@
 		37EE57A021396692007D1607 /* DelayImagedCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE579C21396692007D1607 /* DelayImagedCellViewController.swift */; };
 		37EE57A121396692007D1607 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE579D21396692007D1607 /* LabelCell.swift */; };
 		37EE57A221396692007D1607 /* DelayedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE579E21396692007D1607 /* DelayedCell.swift */; };
+		37EE57A521396BEC007D1607 /* TextureAtlasAtlasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE57A421396BEC007D1607 /* TextureAtlasAtlasViewController.swift */; };
+		37EE57A821396C0C007D1607 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE57A721396C0C007D1607 /* ImageCell.swift */; };
+		37EE57AA21396C30007D1607 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE57A921396C30007D1607 /* Util.swift */; };
+		37EE57AC21396C4A007D1607 /* TextureAtlasNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE57AB21396C4A007D1607 /* TextureAtlasNormalViewController.swift */; };
+		37EE57AE21396C51007D1607 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE57AD21396C51007D1607 /* Icon.swift */; };
+		37EE57B021396C57007D1607 /* icons.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 37EE57AF21396C57007D1607 /* icons.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,13 @@
 		37EE579C21396692007D1607 /* DelayImagedCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayImagedCellViewController.swift; sourceTree = "<group>"; };
 		37EE579D21396692007D1607 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		37EE579E21396692007D1607 /* DelayedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayedCell.swift; sourceTree = "<group>"; };
+		37EE57A421396BEC007D1607 /* TextureAtlasAtlasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureAtlasAtlasViewController.swift; sourceTree = "<group>"; };
+		37EE57A721396C0C007D1607 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		37EE57A921396C30007D1607 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		37EE57AB21396C4A007D1607 /* TextureAtlasNormalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureAtlasNormalViewController.swift; sourceTree = "<group>"; };
+		37EE57AD21396C51007D1607 /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		37EE57AF21396C57007D1607 /* icons.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = icons.atlas; sourceTree = "<group>"; };
+		37EE57B221396E2D007D1607 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +61,7 @@
 			children = (
 				37EE578721396610007D1607 /* iOSPerformanceTest */,
 				37EE578621396610007D1607 /* Products */,
+				37EE57B121396E2D007D1607 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,11 +78,10 @@
 			children = (
 				37EE578821396610007D1607 /* AppDelegate.swift */,
 				37EE578A21396611007D1607 /* HomeViewController.swift */,
-				37EE579A2139667D007D1607 /* ImagedCell */,
-				37EE578C21396611007D1607 /* Main.storyboard */,
-				37EE578F21396611007D1607 /* Assets.xcassets */,
-				37EE579121396611007D1607 /* LaunchScreen.storyboard */,
-				37EE579421396611007D1607 /* Info.plist */,
+				37EE57B521396F2F007D1607 /* Tests */,
+				37EE57A621396BFA007D1607 /* Cells */,
+				37EE57B621396F48007D1607 /* Utils */,
+				37EE57B421396EBE007D1607 /* Resources */,
 			);
 			path = iOSPerformanceTest;
 			sourceTree = "<group>";
@@ -78,10 +91,65 @@
 			children = (
 				37EE579B21396691007D1607 /* ImagedCellViewController.swift */,
 				37EE579C21396692007D1607 /* DelayImagedCellViewController.swift */,
-				37EE579D21396692007D1607 /* LabelCell.swift */,
 				37EE579E21396692007D1607 /* DelayedCell.swift */,
 			);
 			path = ImagedCell;
+			sourceTree = "<group>";
+		};
+		37EE57A321396BCD007D1607 /* TextureAtlas */ = {
+			isa = PBXGroup;
+			children = (
+				37EE57AD21396C51007D1607 /* Icon.swift */,
+				37EE57AB21396C4A007D1607 /* TextureAtlasNormalViewController.swift */,
+				37EE57A421396BEC007D1607 /* TextureAtlasAtlasViewController.swift */,
+			);
+			path = TextureAtlas;
+			sourceTree = "<group>";
+		};
+		37EE57A621396BFA007D1607 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				37EE579D21396692007D1607 /* LabelCell.swift */,
+				37EE57A721396C0C007D1607 /* ImageCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		37EE57B121396E2D007D1607 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37EE57B221396E2D007D1607 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37EE57B421396EBE007D1607 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37EE578C21396611007D1607 /* Main.storyboard */,
+				37EE578F21396611007D1607 /* Assets.xcassets */,
+				37EE579121396611007D1607 /* LaunchScreen.storyboard */,
+				37EE579421396611007D1607 /* Info.plist */,
+				37EE57AF21396C57007D1607 /* icons.atlas */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37EE57B521396F2F007D1607 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				37EE579A2139667D007D1607 /* ImagedCell */,
+				37EE57A321396BCD007D1607 /* TextureAtlas */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		37EE57B621396F48007D1607 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				37EE57A921396C30007D1607 /* Util.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +212,7 @@
 			files = (
 				37EE579321396611007D1607 /* LaunchScreen.storyboard in Resources */,
 				37EE579021396611007D1607 /* Assets.xcassets in Resources */,
+				37EE57B021396C57007D1607 /* icons.atlas in Resources */,
 				37EE578E21396611007D1607 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,10 +224,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37EE57AC21396C4A007D1607 /* TextureAtlasNormalViewController.swift in Sources */,
 				37EE579F21396692007D1607 /* ImagedCellViewController.swift in Sources */,
+				37EE57AA21396C30007D1607 /* Util.swift in Sources */,
 				37EE578B21396611007D1607 /* HomeViewController.swift in Sources */,
 				37EE57A221396692007D1607 /* DelayedCell.swift in Sources */,
 				37EE57A121396692007D1607 /* LabelCell.swift in Sources */,
+				37EE57AE21396C51007D1607 /* Icon.swift in Sources */,
+				37EE57A521396BEC007D1607 /* TextureAtlasAtlasViewController.swift in Sources */,
+				37EE57A821396C0C007D1607 /* ImageCell.swift in Sources */,
 				37EE57A021396692007D1607 /* DelayImagedCellViewController.swift in Sources */,
 				37EE578921396610007D1607 /* AppDelegate.swift in Sources */,
 			);
