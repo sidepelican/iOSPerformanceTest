@@ -14,7 +14,7 @@ class SICImagedViewController: LayoutMeasureCollectionViewConroller {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView?.register(DelayedCell<LabelCell>.self, forCellWithReuseIdentifier: "Delay")
+        collectionView?.register(DelayedCell<SlowInitLabelCell>.self, forCellWithReuseIdentifier: "Delay")
         collectionView?.isPrefetchingEnabled = false
     }
 
@@ -23,7 +23,7 @@ class SICImagedViewController: LayoutMeasureCollectionViewConroller {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Delay", for: indexPath) as! DelayedCell<LabelCell>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Delay", for: indexPath) as! DelayedCell<SlowInitLabelCell>
         cell.configure(with: items[indexPath.row])
         return cell
     }

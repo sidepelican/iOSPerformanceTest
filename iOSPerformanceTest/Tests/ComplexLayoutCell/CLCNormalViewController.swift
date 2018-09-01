@@ -33,7 +33,11 @@ class CLCNormalViewController: LayoutMeasureCollectionViewConroller, UICollectio
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width / 3 - 10, height: 100)
+        if indexPath.row == 0 {
+            return CGSize(width: collectionView.bounds.width * 0.67, height: 160)
+        }
+
+        return CGSize(width: collectionView.bounds.width / 10 - 1, height: 70)
     }
 }
 

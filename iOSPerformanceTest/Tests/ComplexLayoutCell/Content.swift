@@ -13,7 +13,7 @@ extension Content {
         return (0..<100)
             .compactMap { _ in icons.randomElement() }
             .map { icon in
-            let description = (0..<Int.random(in: 8...12))
+            let description = (0..<Int.random(in: 7...10))
                 .map { _ in wordGenerator.next() }
                 .joined(separator: " ")
             return Content(title: wordGenerator.next(),

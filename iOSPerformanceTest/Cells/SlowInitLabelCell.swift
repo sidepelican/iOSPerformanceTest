@@ -1,6 +1,6 @@
 import UIKit
 
-final class LabelCell: UICollectionViewCell {
+final class SlowInitLabelCell: UICollectionViewCell {
     private var label: UILabel!
 
     override init(frame: CGRect) {
@@ -36,6 +36,6 @@ final class LabelCell: UICollectionViewCell {
     }
 }
 
-extension LabelCell: Configurable {
+extension SlowInitLabelCell: Configurable {
     typealias ConfigData = String
 }

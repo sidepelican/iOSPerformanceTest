@@ -1,8 +1,8 @@
 import UIKit
 
-private let items = (1...200).map(String.init)
+private let items = Content.makeContents()
 
-class SICNormalViewController: LayoutMeasureCollectionViewConroller {
+class CLCLazyViewController: LayoutMeasureCollectionViewConroller, UICollectionViewDelegateFlowLayout  {
     init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
@@ -14,7 +14,7 @@ class SICNormalViewController: LayoutMeasureCollectionViewConroller {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView?.register(SlowInitLabelCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView?.register(LazyCell<ContentCell>.self, forCellWithReuseIdentifier: "Cell")
         collectionView?.isPrefetchingEnabled = false
     }
 
@@ -23,13 +23,21 @@ class SICNormalViewController: LayoutMeasureCollectionViewConroller {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! SlowInitLabelCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! LazyCell<ContentCell>
         cell.configure(with: items[indexPath.row])
         return cell
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.row == 0 {
+            return CGSize(width: collectionView.bounds.width * 0.67, height: 160)
+        }
+
+        return CGSize(width: collectionView.bounds.width / 10 - 1, height: 70)
     }
 }
 
