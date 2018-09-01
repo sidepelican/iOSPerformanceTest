@@ -40,6 +40,9 @@ class HomeViewController: UITableViewController {
                 Page.make(from: LSESizeThatFitsViewController.self),
                 Page.make(from: LSECacheViewController.self),
             ]),
+            Section(headerTitle: "ConplecLayoutCell", pages: [
+                Page.make(from: CLCNormalViewController.self),
+            ]),
         ]
     }
 

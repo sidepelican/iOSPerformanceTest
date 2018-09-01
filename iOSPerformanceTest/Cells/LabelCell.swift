@@ -39,20 +39,3 @@ final class LabelCell: UICollectionViewCell {
 extension LabelCell: Configurable {
     typealias ConfigData = String
 }
-
-private extension UIColor {
-    static func random() -> UIColor {
-        let rand = arc4random()
-        var r = CGFloat((rand >> 32) & 0xFF) / 255.0
-        var g = CGFloat((rand >> 16) & 0xFF) / 255.0
-        var b = CGFloat((rand >> 0 ) & 0xFF) / 255.0
-
-        if r + g + b < 1.0 {
-            r = r * 0.8 + 0.2
-            g = g * 0.8 + 0.2
-            b = b * 0.8 + 0.2
-        }
-
-        return UIColor(red: r, green: g, blue: b, alpha: 1.0)
-    }
-}

@@ -42,3 +42,19 @@ private func makeIdentifier(file: String, function: String) -> String {
     trimmedFile = trimmedFile.replacingOccurrences(of: ".swift", with: "")
     return "\(trimmedFile) (\(function))"
 }
+
+extension UIColor {
+    static func random() -> UIColor {
+        var r = CGFloat.random(in: 0.0...1.0)
+        var g = CGFloat.random(in: 0.0...1.0)
+        var b = CGFloat.random(in: 0.0...1.0)
+
+        if r + g + b < 1.0 {
+            r = r * 0.8 + 0.2
+            g = g * 0.8 + 0.2
+            b = b * 0.8 + 0.2
+        }
+
+        return UIColor(red: r, green: g, blue: b, alpha: 1.0)
+    }
+}
