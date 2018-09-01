@@ -43,6 +43,7 @@ class HomeViewController: UITableViewController {
             Section(headerTitle: "ConplecLayoutCell", pages: [
                 Page.make(from: CLCNormalViewController.self),
                 Page.make(from: CLCLazyViewController.self),
+                Page.make(from: CLCSequentialLazyViewController.self),
             ]),
         ]
     }

@@ -13,6 +13,8 @@
 		37C45E82213AEAB400696989 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E81213AEAB400696989 /* Content.swift */; };
 		37C45E84213AEFAD00696989 /* CLCLazyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E83213AEFAC00696989 /* CLCLazyViewController.swift */; };
 		37C45E86213AF1E800696989 /* LazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E85213AF1E800696989 /* LazyCell.swift */; };
+		37C45E88213AFB4300696989 /* SequentialLazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E87213AFB4300696989 /* SequentialLazyCell.swift */; };
+		37C45E8A213AFB7C00696989 /* CLCSequentialLazyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */; };
 		37EE578921396610007D1607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE578821396610007D1607 /* AppDelegate.swift */; };
 		37EE578B21396611007D1607 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE578A21396611007D1607 /* HomeViewController.swift */; };
 		37EE578E21396611007D1607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EE578C21396611007D1607 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		37C45E81213AEAB400696989 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		37C45E83213AEFAC00696989 /* CLCLazyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCLazyViewController.swift; sourceTree = "<group>"; };
 		37C45E85213AF1E800696989 /* LazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyCell.swift; sourceTree = "<group>"; };
+		37C45E87213AFB4300696989 /* SequentialLazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialLazyCell.swift; sourceTree = "<group>"; };
+		37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCSequentialLazyViewController.swift; sourceTree = "<group>"; };
 		37EE578521396610007D1607 /* iOSPerformanceTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPerformanceTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EE578821396610007D1607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EE578A21396611007D1607 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +96,10 @@
 			children = (
 				37C45E81213AEAB400696989 /* Content.swift */,
 				37C45E85213AF1E800696989 /* LazyCell.swift */,
+				37C45E87213AFB4300696989 /* SequentialLazyCell.swift */,
 				37C45E7F213AEA7E00696989 /* CLCNormalViewController.swift */,
 				37C45E83213AEFAC00696989 /* CLCLazyViewController.swift */,
+				37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */,
 			);
 			path = ComplexLayoutCell;
 			sourceTree = "<group>";
@@ -346,11 +352,13 @@
 				37F7699C213997FE0096D1AE /* LSENSStringSizeViewController.swift in Sources */,
 				37EE57A221396692007D1607 /* DelayedCell.swift in Sources */,
 				37C45E84213AEFAD00696989 /* CLCLazyViewController.swift in Sources */,
+				37C45E8A213AFB7C00696989 /* CLCSequentialLazyViewController.swift in Sources */,
 				37C45E86213AF1E800696989 /* LazyCell.swift in Sources */,
 				37EE57A121396692007D1607 /* SlowInitLabelCell.swift in Sources */,
 				37EE57AE21396C51007D1607 /* Icon.swift in Sources */,
 				37F7699E2139984E0096D1AE /* RandomWordGenerator.swift in Sources */,
 				37C45E7C213AE4A900696989 /* ContentCell.swift in Sources */,
+				37C45E88213AFB4300696989 /* SequentialLazyCell.swift in Sources */,
 				37F76995213978B60096D1AE /* LSILazySetViewController.swift in Sources */,
 				37F769A22139A23F0096D1AE /* LSECacheViewController.swift in Sources */,
 				37EE57A521396BEC007D1607 /* LSITextureAtlasViewController.swift in Sources */,
