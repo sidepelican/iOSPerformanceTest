@@ -15,6 +15,8 @@
 		37C45E86213AF1E800696989 /* LazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E85213AF1E800696989 /* LazyCell.swift */; };
 		37C45E88213AFB4300696989 /* SequentialLazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E87213AFB4300696989 /* SequentialLazyCell.swift */; };
 		37C45E8A213AFB7C00696989 /* CLCSequentialLazyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */; };
+		37C45E8C213AFCB800696989 /* ImagedNibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E8B213AFCB800696989 /* ImagedNibCell.swift */; };
+		37C45E8E213AFD3500696989 /* CLCImagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E8D213AFD3500696989 /* CLCImagedViewController.swift */; };
 		37EE578921396610007D1607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE578821396610007D1607 /* AppDelegate.swift */; };
 		37EE578B21396611007D1607 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE578A21396611007D1607 /* HomeViewController.swift */; };
 		37EE578E21396611007D1607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EE578C21396611007D1607 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		37C45E85213AF1E800696989 /* LazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyCell.swift; sourceTree = "<group>"; };
 		37C45E87213AFB4300696989 /* SequentialLazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialLazyCell.swift; sourceTree = "<group>"; };
 		37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCSequentialLazyViewController.swift; sourceTree = "<group>"; };
+		37C45E8B213AFCB800696989 /* ImagedNibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagedNibCell.swift; sourceTree = "<group>"; };
+		37C45E8D213AFD3500696989 /* CLCImagedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCImagedViewController.swift; sourceTree = "<group>"; };
 		37EE578521396610007D1607 /* iOSPerformanceTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPerformanceTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EE578821396610007D1607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EE578A21396611007D1607 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -97,9 +101,11 @@
 				37C45E81213AEAB400696989 /* Content.swift */,
 				37C45E85213AF1E800696989 /* LazyCell.swift */,
 				37C45E87213AFB4300696989 /* SequentialLazyCell.swift */,
+				37C45E8B213AFCB800696989 /* ImagedNibCell.swift */,
 				37C45E7F213AEA7E00696989 /* CLCNormalViewController.swift */,
 				37C45E83213AEFAC00696989 /* CLCLazyViewController.swift */,
 				37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */,
+				37C45E8D213AFD3500696989 /* CLCImagedViewController.swift */,
 			);
 			path = ComplexLayoutCell;
 			sourceTree = "<group>";
@@ -347,8 +353,10 @@
 				37EE579F21396692007D1607 /* SICNormalViewController.swift in Sources */,
 				37C45E82213AEAB400696989 /* Content.swift in Sources */,
 				37C45E80213AEA7E00696989 /* CLCNormalViewController.swift in Sources */,
+				37C45E8E213AFD3500696989 /* CLCImagedViewController.swift in Sources */,
 				37EE57AA21396C30007D1607 /* Util.swift in Sources */,
 				37EE578B21396611007D1607 /* HomeViewController.swift in Sources */,
+				37C45E8C213AFCB800696989 /* ImagedNibCell.swift in Sources */,
 				37F7699C213997FE0096D1AE /* LSENSStringSizeViewController.swift in Sources */,
 				37EE57A221396692007D1607 /* DelayedCell.swift in Sources */,
 				37C45E84213AEFAD00696989 /* CLCLazyViewController.swift in Sources */,
