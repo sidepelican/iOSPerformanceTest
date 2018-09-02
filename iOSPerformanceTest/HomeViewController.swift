@@ -40,10 +40,11 @@ class HomeViewController: UITableViewController {
                 Page.make(from: LSESizeThatFitsViewController.self),
                 Page.make(from: LSECacheViewController.self),
             ]),
-            Section(headerTitle: "ConplecLayoutCell", pages: [
+            Section(headerTitle: "ConplexLayoutCell", pages: [
                 Page.make(from: CLCNormalViewController.self),
                 Page.make(from: CLCLazyViewController.self),
                 Page.make(from: CLCSequentialLazyViewController.self),
+                Page.make(from: CLCDisplaySyncLazyViewController.self),
                 Page.make(from: CLCImagedViewController.self),
             ]),
         ]

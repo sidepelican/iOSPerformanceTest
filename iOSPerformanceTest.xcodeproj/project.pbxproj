@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3797ED1D213B67C800C6FEE8 /* DisplaySyncLazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797ED1C213B67C800C6FEE8 /* DisplaySyncLazyCell.swift */; };
+		3797ED1F213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797ED1E213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift */; };
 		37C45E7C213AE4A900696989 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E7A213AE4A900696989 /* ContentCell.swift */; };
 		37C45E7D213AE4A900696989 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C45E7B213AE4A900696989 /* ContentCell.xib */; };
 		37C45E80213AEA7E00696989 /* CLCNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E7F213AEA7E00696989 /* CLCNormalViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3797ED1C213B67C800C6FEE8 /* DisplaySyncLazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySyncLazyCell.swift; sourceTree = "<group>"; };
+		3797ED1E213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCDisplaySyncLazyViewController.swift; sourceTree = "<group>"; };
 		37C45E7A213AE4A900696989 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		37C45E7B213AE4A900696989 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
 		37C45E7F213AEA7E00696989 /* CLCNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCNormalViewController.swift; sourceTree = "<group>"; };
@@ -101,10 +105,12 @@
 				37C45E81213AEAB400696989 /* Content.swift */,
 				37C45E85213AF1E800696989 /* LazyCell.swift */,
 				37C45E87213AFB4300696989 /* SequentialLazyCell.swift */,
+				3797ED1C213B67C800C6FEE8 /* DisplaySyncLazyCell.swift */,
 				37C45E8B213AFCB800696989 /* ImagedNibCell.swift */,
 				37C45E7F213AEA7E00696989 /* CLCNormalViewController.swift */,
 				37C45E83213AEFAC00696989 /* CLCLazyViewController.swift */,
 				37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */,
+				3797ED1E213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift */,
 				37C45E8D213AFD3500696989 /* CLCImagedViewController.swift */,
 			);
 			path = ComplexLayoutCell;
@@ -373,9 +379,11 @@
 				37F769A02139A0C70096D1AE /* LSESizeThatFitsViewController.swift in Sources */,
 				37EE57A821396C0C007D1607 /* ImageCell.swift in Sources */,
 				37EE57A021396692007D1607 /* SICImagedViewController.swift in Sources */,
+				3797ED1F213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift in Sources */,
 				37F7699A2139976E0096D1AE /* TagLabelCell.swift in Sources */,
 				37EE578921396610007D1607 /* AppDelegate.swift in Sources */,
 				37F7699721397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift in Sources */,
+				3797ED1D213B67C800C6FEE8 /* DisplaySyncLazyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
