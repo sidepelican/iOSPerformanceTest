@@ -1,9 +1,20 @@
 import UIKit
 
+private enum TaskKind: Hashable {
+    case initialize(typename: String)
+    case update(typename: String)
+}
+
 private final class LayoutScheduler {
     static let shared = LayoutScheduler()
 
-    private var layoutTasks: [()->()] = []
+    private struct Task {
+        let kind: TaskKind
+        let process: ()->()
+    }
+
+    private var layoutTasks: [Task] = []
+    private var estimateConsumingTime: [TaskKind: TimeInterval] = [:]
 
     private init() {
         let link = CADisplayLink(target: self, selector: #selector(step))
@@ -13,17 +24,35 @@ private final class LayoutScheduler {
     @objc private func step(displayLink: CADisplayLink) {
         if layoutTasks.isEmpty { return }
 
-        let startTime = CFAbsoluteTimeGetCurrent()
-        for _ in 0..<2 where !layoutTasks.isEmpty {
-            let task = layoutTasks.remove(at: 0)
-            task()
+        var remainTime = displayLink.targetTimestamp - displayLink.timestamp
+
+        while true {
+            guard let task = layoutTasks.first else { break }
+
+            let startTime = CFAbsoluteTimeGetCurrent()
+            task.process()
+            let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
+
+            let prevTime = estimateConsumingTime[task.kind]
+            estimateConsumingTime[task.kind] = prevTime != nil ? (timeElapsed + prevTime!) / 2 : timeElapsed
+
+            remainTime -= timeElapsed
+            layoutTasks.remove(at: 0)
+
+            if let next = layoutTasks.first {
+                if let estimate = estimateConsumingTime[next.kind] {
+                    if remainTime > estimate {
+                        continue
+                    }
+                }
+            }
+
+            break
         }
-        let timeElapsed = (CFAbsoluteTimeGetCurrent() - startTime) * 1000
-        print("\(timeElapsed) ms")
     }
 
-    func addTask(_ task: @escaping ()->()) {
-        layoutTasks.append(task)
+    func addTask(with kind: TaskKind, task: @escaping ()->()) {
+        layoutTasks.append(Task(kind: kind, process: task))
     }
 }
 
@@ -32,13 +61,15 @@ final class DisplaySyncLazyCell<T: UICollectionViewCell & Configurable>: UIColle
 
     func configure(with data: T.ConfigData) {
         if let cell = genericCell {
-            cell.configure(with: data)
+            LayoutScheduler.shared.addTask(with: .update(typename: T.className)) {
+                cell.configure(with: data)
+            }
             return
         }
 
         backgroundColor = .white
 
-        LayoutScheduler.shared.addTask {
+        LayoutScheduler.shared.addTask(with: .initialize(typename: T.className)) {
             let cell = UINib(nibName: T.className, bundle: nil).instantiate(withOwner: nil).first as! T
             self.genericCell = cell
             cell.configure(with: data)
