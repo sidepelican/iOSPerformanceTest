@@ -5,6 +5,43 @@ private enum TaskKind: Hashable {
     case update(typename: String)
 }
 
+private var currentFrameStartTime: CFAbsoluteTime?
+
+private func setupRunLoop() {
+
+    let observer = CFRunLoopObserverCreate(kCFAllocatorDefault, CFRunLoopActivity.allActivities.rawValue, true, 0, { (_, activity, _) in
+//        switch activity {
+//        case .entry:
+//            print("entry,", CFAbsoluteTimeGetCurrent())
+//        case .beforeTimers:
+//            print("beforeTimers,", CFAbsoluteTimeGetCurrent())
+//        case .beforeSources:
+//            print("beforeSources,", CFAbsoluteTimeGetCurrent())
+//        case .beforeWaiting:
+//            print("beforeWaiting,", CFAbsoluteTimeGetCurrent())
+//        case .afterWaiting:
+//            print("afterWaiting,", CFAbsoluteTimeGetCurrent())
+//        case .exit:
+//            print("exit,", CFAbsoluteTimeGetCurrent())
+//        default:
+//            fatalError()
+//        }
+        switch activity {
+        case CFRunLoopActivity.afterWaiting:
+            currentFrameStartTime = CFAbsoluteTimeGetCurrent()
+        case CFRunLoopActivity.beforeWaiting:
+            if let currentFrameStartTime = currentFrameStartTime {
+                let currentDate = CFAbsoluteTimeGetCurrent()
+                LayoutScheduler.shared.step(with: 0.010 - (currentDate - currentFrameStartTime))
+            }
+        default:
+            break
+        }
+    }, nil)
+
+    CFRunLoopAddObserver(CFRunLoopGetMain(), observer, .commonModes)
+}
+
 private final class LayoutScheduler {
     static let shared = LayoutScheduler()
 
@@ -16,17 +53,21 @@ private final class LayoutScheduler {
     private var layoutTasks: [Task] = []
     private var estimateConsumingTime: [TaskKind: TimeInterval] = [:]
 
+    var context = CFRunLoopObserverContext()
+
     private init() {
-        let link = CADisplayLink(target: self, selector: #selector(step))
-        link.add(to: .main, forMode: .commonModes)
+        setupRunLoop()
     }
 
-    @objc private func step(displayLink: CADisplayLink) {
+    fileprivate func step(with remainTime: CFAbsoluteTime) {
         if layoutTasks.isEmpty { return }
 
-        var remainTime = displayLink.targetTimestamp - displayLink.timestamp
+        var remainTime = remainTime
+        print("remainTime", remainTime)
 
-        while true {
+        var processedCount = 0
+
+        while remainTime > 0 {
             guard let task = layoutTasks.first else { break }
 
             let startTime = CFAbsoluteTimeGetCurrent()
@@ -38,6 +79,7 @@ private final class LayoutScheduler {
 
             remainTime -= timeElapsed
             layoutTasks.remove(at: 0)
+            processedCount += 1
 
             if let next = layoutTasks.first {
                 if let estimate = estimateConsumingTime[next.kind] {
@@ -46,9 +88,9 @@ private final class LayoutScheduler {
                     }
                 }
             }
-
-            break
         }
+
+        print("processedCount", processedCount)
     }
 
     func addTask(with kind: TaskKind, task: @escaping ()->()) {
