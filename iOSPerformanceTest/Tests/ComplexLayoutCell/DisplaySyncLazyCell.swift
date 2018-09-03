@@ -6,40 +6,46 @@ private enum TaskKind: Hashable {
 }
 
 private var currentFrameStartTime: CFAbsoluteTime?
+private var processFinishedTime: CFAbsoluteTime = 0.0
+private var targetTimestamp: CFAbsoluteTime = -CFAbsoluteTime.greatestFiniteMagnitude
+private var displayInterval: TimeInterval = 1.0 / 60.0
 
 private func setupRunLoop() {
 
     let observer = CFRunLoopObserverCreate(kCFAllocatorDefault, CFRunLoopActivity.allActivities.rawValue, true, 0, { (_, activity, _) in
-//        switch activity {
-//        case .entry:
-//            print("entry,", CFAbsoluteTimeGetCurrent())
-//        case .beforeTimers:
-//            print("beforeTimers,", CFAbsoluteTimeGetCurrent())
-//        case .beforeSources:
-//            print("beforeSources,", CFAbsoluteTimeGetCurrent())
-//        case .beforeWaiting:
-//            print("beforeWaiting,", CFAbsoluteTimeGetCurrent())
-//        case .afterWaiting:
-//            print("afterWaiting,", CFAbsoluteTimeGetCurrent())
-//        case .exit:
-//            print("exit,", CFAbsoluteTimeGetCurrent())
-//        default:
-//            fatalError()
-//        }
+        switch activity {
+        case .entry:
+            print("entry,")
+        case .beforeTimers:
+            print("beforeTimers,")
+        case .beforeSources:
+            print("beforeSources,")
+        case .beforeWaiting:
+            print("beforeWaiting,")
+        case .afterWaiting:
+            print("afterWaiting,", CFAbsoluteTimeGetCurrent() - processFinishedTime)
+        case .exit:
+            print("exit,")
+        default:
+            fatalError()
+        }
+
         switch activity {
         case CFRunLoopActivity.afterWaiting:
-            currentFrameStartTime = CFAbsoluteTimeGetCurrent()
+            break
         case CFRunLoopActivity.beforeWaiting:
-            if let currentFrameStartTime = currentFrameStartTime {
-                let currentDate = CFAbsoluteTimeGetCurrent()
-                LayoutScheduler.shared.step(with: 0.010 - (currentDate - currentFrameStartTime))
-            }
+//            if let startTime = currentFrameStartTime {
+//                let currentDate = CFAbsoluteTimeGetCurrent()
+//                LayoutScheduler.shared.step(within: displayInterval - (currentDate - startTime))
+//                currentFrameStartTime = nil
+//            }
+            LayoutScheduler.shared.step(within: targetTimestamp - CFAbsoluteTimeGetCurrent())
         default:
             break
         }
     }, nil)
 
-    CFRunLoopAddObserver(CFRunLoopGetMain(), observer, .commonModes)
+    CFRunLoopAddObserver(RunLoop.main.getCFRunLoop(), observer, .commonModes)
 }
 
 private final class LayoutScheduler {
@@ -57,15 +63,28 @@ private final class LayoutScheduler {
 
     private init() {
         setupRunLoop()
+
+        let l = CADisplayLink.init(target: self, selector: #selector(link))
+        l.add(to: .main, forMode: .commonModes)
     }
 
-    fileprivate func step(with remainTime: CFAbsoluteTime) {
-        if layoutTasks.isEmpty { return }
+    @objc private func link(_ link: CADisplayLink) {
+        print("CADisplayLink begin")
+        currentFrameStartTime = CFAbsoluteTimeGetCurrent()
+        displayInterval = link.duration
+        targetTimestamp = CFAbsoluteTimeGetCurrent() + link.duration
+        print("CADisplayLink end")
+    }
 
-        var remainTime = remainTime
-        print("remainTime", remainTime)
-
+    fileprivate func step(within remainTime: CFAbsoluteTime) {
         var processedCount = 0
+        let input = remainTime
+        var remainTime = remainTime
+        defer {
+            print("input", input, ",remainTime", remainTime, "processedCount", processedCount)
+            processFinishedTime = CFAbsoluteTimeGetCurrent()
+        }
+        if layoutTasks.isEmpty { return }
 
         while remainTime > 0 {
             guard let task = layoutTasks.first else { break }
@@ -87,10 +106,10 @@ private final class LayoutScheduler {
                         continue
                     }
                 }
+
+                break
             }
         }
-
-        print("processedCount", processedCount)
     }
 
     func addTask(with kind: TaskKind, task: @escaping ()->()) {
