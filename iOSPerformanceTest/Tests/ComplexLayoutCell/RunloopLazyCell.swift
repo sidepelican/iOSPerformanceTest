@@ -5,6 +5,17 @@ private enum TaskKind: Hashable {
     case update(typename: String)
 }
 
+private var targetTimestamp: CFAbsoluteTime = -CFAbsoluteTime.greatestFiniteMagnitude
+private var frameInterval: CFTimeInterval = 1/60
+
+private func setupRunLoop() {
+    let observer = CFRunLoopObserverCreate(kCFAllocatorDefault, CFRunLoopActivity.beforeWaiting.rawValue, true, 0, { (_, _, _) in
+        LayoutScheduler.shared.step(within: targetTimestamp - CFAbsoluteTimeGetCurrent())
+    }, nil)
+
+    CFRunLoopAddObserver(RunLoop.main.getCFRunLoop(), observer, .commonModes)
+}
+
 private final class LayoutScheduler {
     static let shared = LayoutScheduler()
 
@@ -14,15 +25,46 @@ private final class LayoutScheduler {
     }
 
     private var layoutTasks: [Task] = []
+    private var estimateConsumingTime: [TaskKind: TimeInterval] = [:]
 
     private init() {
-        let l = CADisplayLink(target: self, selector: #selector(link))
+        setupRunLoop()
+
+        let l = CADisplayLink.init(target: self, selector: #selector(link))
         l.add(to: .main, forMode: .commonModes)
     }
 
     @objc private func link(_ link: CADisplayLink) {
-        if !layoutTasks.isEmpty {
-            layoutTasks.remove(at: 0).process()
+        targetTimestamp = CFAbsoluteTimeGetCurrent() + link.duration
+        frameInterval = link.duration
+    }
+
+    fileprivate func step(within remainTime: CFAbsoluteTime) {
+        if layoutTasks.isEmpty { return }
+        var remainTime = remainTime * 0.6
+
+        while remainTime > 0 {
+            guard let task = layoutTasks.first else { break }
+
+            let startTime = CFAbsoluteTimeGetCurrent()
+            task.process()
+            let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
+
+            let prevTime = estimateConsumingTime[task.kind]
+            estimateConsumingTime[task.kind] = prevTime != nil ? (timeElapsed + prevTime!) / 2 : timeElapsed
+
+            remainTime -= timeElapsed
+            layoutTasks.remove(at: 0)
+
+            if let next = layoutTasks.first {
+                if let estimate = estimateConsumingTime[next.kind] {
+                    if remainTime > estimate {
+                        continue
+                    }
+                }
+
+                break
+            }
         }
     }
 
@@ -36,7 +78,7 @@ private final class LayoutScheduler {
     }
 }
 
-final class DisplaySyncLazyCell<T: UICollectionViewCell & Configurable>: UICollectionViewCell {
+final class RunloopLazyCell<T: UICollectionViewCell & Configurable>: UICollectionViewCell {
     private var genericCell: T?
 
     func configure(with data: T.ConfigData) {

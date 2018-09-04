@@ -45,6 +45,7 @@ class HomeViewController: UITableViewController {
                 Page.make(from: CLCLazyViewController.self),
                 Page.make(from: CLCSequentialLazyViewController.self),
                 Page.make(from: CLCDisplaySyncLazyViewController.self),
+                Page.make(from: CLCRunloopLazyViewController.self),
                 Page.make(from: CLCImagedViewController.self),
             ]),
         ]
