@@ -103,9 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		377F6CE0213ED202003738B1 /* CellSeparatorLine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CellSeparatorLine;
+			sourceTree = "<group>";
+		};
 		37C45E7E213AEA3900696989 /* ComplexLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
+				37C45E7A213AE4A900696989 /* ContentCell.swift */,
+				37C45E7B213AE4A900696989 /* ContentCell.xib */,
 				37C45E81213AEAB400696989 /* Content.swift */,
 				37C45E85213AF1E800696989 /* LazyCell.swift */,
 				37C45E87213AFB4300696989 /* SequentialLazyCell.swift */,
@@ -146,7 +155,6 @@
 				37EE578821396610007D1607 /* AppDelegate.swift */,
 				37EE578A21396611007D1607 /* HomeViewController.swift */,
 				37EE57B521396F2F007D1607 /* Tests */,
-				37EE57A621396BFA007D1607 /* Cells */,
 				37EE57B621396F48007D1607 /* Utils */,
 				37EE57B421396EBE007D1607 /* Resources */,
 			);
@@ -156,6 +164,7 @@
 		37EE579A2139667D007D1607 /* SlowInitializedCell */ = {
 			isa = PBXGroup;
 			children = (
+				37EE579D21396692007D1607 /* SlowInitLabelCell.swift */,
 				37EE579B21396691007D1607 /* SICNormalViewController.swift */,
 				37EE579C21396692007D1607 /* SICImagedViewController.swift */,
 				37EE579E21396692007D1607 /* DelayedCell.swift */,
@@ -166,23 +175,13 @@
 		37EE57A321396BCD007D1607 /* LoadSmallImages */ = {
 			isa = PBXGroup;
 			children = (
+				37EE57A721396C0C007D1607 /* ImageCell.swift */,
 				37EE57AD21396C51007D1607 /* Icon.swift */,
 				37EE57AB21396C4A007D1607 /* LSINormalViewController.swift */,
 				37F76994213978B60096D1AE /* LSILazySetViewController.swift */,
 				37EE57A421396BEC007D1607 /* LSITextureAtlasViewController.swift */,
 			);
 			path = LoadSmallImages;
-			sourceTree = "<group>";
-		};
-		37EE57A621396BFA007D1607 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				37EE57A721396C0C007D1607 /* ImageCell.swift */,
-				37EE579D21396692007D1607 /* SlowInitLabelCell.swift */,
-				37C45E7A213AE4A900696989 /* ContentCell.swift */,
-				37C45E7B213AE4A900696989 /* ContentCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		37EE57B121396E2D007D1607 /* Frameworks */ = {
@@ -213,6 +212,7 @@
 				37EE57A321396BCD007D1607 /* LoadSmallImages */,
 				37F769982139963A0096D1AE /* LabelSizeEstimates */,
 				37C45E7E213AEA3900696989 /* ComplexLayoutCell */,
+				377F6CE0213ED202003738B1 /* CellSeparatorLine */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
