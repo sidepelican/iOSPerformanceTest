@@ -40,10 +40,11 @@ private final class LayoutScheduler {
     }
 
     fileprivate func step(within remainTime: CFAbsoluteTime) {
-        if layoutTasks.isEmpty { return }
+        let stopTime = frameInterval * 0.1
+        if layoutTasks.isEmpty || remainTime < stopTime { return }
         var remainTime = remainTime * 0.6
 
-        while remainTime > 0 {
+        while remainTime > stopTime {
             guard let task = layoutTasks.first else { break }
 
             let startTime = CFAbsoluteTimeGetCurrent()
