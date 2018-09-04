@@ -8,24 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		377F6CDD213ECE4C003738B1 /* RunloopLazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CDC213ECE4C003738B1 /* RunloopLazyCell.swift */; };
-		377F6CDF213ED053003738B1 /* CLCRunloopLazyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CDE213ED053003738B1 /* CLCRunloopLazyViewController.swift */; };
 		377F6CE3213ED3EE003738B1 /* UIViewSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CE1213ED3EE003738B1 /* UIViewSeparatorCell.swift */; };
 		377F6CE8213ED463003738B1 /* CALayerSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CE6213ED463003738B1 /* CALayerSeparatorCell.swift */; };
 		377F6CEB213ED525003738B1 /* CSLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CEA213ED525003738B1 /* CSLBaseViewController.swift */; };
 		377F6CED213ED599003738B1 /* CSLViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CEC213ED599003738B1 /* CSLViewControllers.swift */; };
 		377F6CEF213ED8FF003738B1 /* DrawrectSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CEE213ED8FF003738B1 /* DrawrectSeparatorCell.swift */; };
+		377F6CF2213EDC39003738B1 /* CLCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CF1213EDC39003738B1 /* CLCBaseViewController.swift */; };
 		3797ED1D213B67C800C6FEE8 /* DisplaySyncLazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797ED1C213B67C800C6FEE8 /* DisplaySyncLazyCell.swift */; };
-		3797ED1F213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797ED1E213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift */; };
 		37C45E7C213AE4A900696989 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E7A213AE4A900696989 /* ContentCell.swift */; };
 		37C45E7D213AE4A900696989 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C45E7B213AE4A900696989 /* ContentCell.xib */; };
-		37C45E80213AEA7E00696989 /* CLCNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E7F213AEA7E00696989 /* CLCNormalViewController.swift */; };
 		37C45E82213AEAB400696989 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E81213AEAB400696989 /* Content.swift */; };
-		37C45E84213AEFAD00696989 /* CLCLazyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E83213AEFAC00696989 /* CLCLazyViewController.swift */; };
 		37C45E86213AF1E800696989 /* LazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E85213AF1E800696989 /* LazyCell.swift */; };
 		37C45E88213AFB4300696989 /* SequentialLazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E87213AFB4300696989 /* SequentialLazyCell.swift */; };
-		37C45E8A213AFB7C00696989 /* CLCSequentialLazyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */; };
 		37C45E8C213AFCB800696989 /* ImagedNibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E8B213AFCB800696989 /* ImagedNibCell.swift */; };
-		37C45E8E213AFD3500696989 /* CLCImagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E8D213AFD3500696989 /* CLCImagedViewController.swift */; };
+		37C45E8E213AFD3500696989 /* CLCViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C45E8D213AFD3500696989 /* CLCViewControllers.swift */; };
 		37EE578921396610007D1607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE578821396610007D1607 /* AppDelegate.swift */; };
 		37EE578B21396611007D1607 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE578A21396611007D1607 /* HomeViewController.swift */; };
 		37EE578E21396611007D1607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EE578C21396611007D1607 /* Main.storyboard */; };
@@ -53,24 +49,20 @@
 
 /* Begin PBXFileReference section */
 		377F6CDC213ECE4C003738B1 /* RunloopLazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunloopLazyCell.swift; sourceTree = "<group>"; };
-		377F6CDE213ED053003738B1 /* CLCRunloopLazyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCRunloopLazyViewController.swift; sourceTree = "<group>"; };
 		377F6CE1213ED3EE003738B1 /* UIViewSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSeparatorCell.swift; sourceTree = "<group>"; };
 		377F6CE6213ED463003738B1 /* CALayerSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerSeparatorCell.swift; sourceTree = "<group>"; };
 		377F6CEA213ED525003738B1 /* CSLBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLBaseViewController.swift; sourceTree = "<group>"; };
 		377F6CEC213ED599003738B1 /* CSLViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLViewControllers.swift; sourceTree = "<group>"; };
 		377F6CEE213ED8FF003738B1 /* DrawrectSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawrectSeparatorCell.swift; sourceTree = "<group>"; };
+		377F6CF1213EDC39003738B1 /* CLCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCBaseViewController.swift; sourceTree = "<group>"; };
 		3797ED1C213B67C800C6FEE8 /* DisplaySyncLazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySyncLazyCell.swift; sourceTree = "<group>"; };
-		3797ED1E213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCDisplaySyncLazyViewController.swift; sourceTree = "<group>"; };
 		37C45E7A213AE4A900696989 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		37C45E7B213AE4A900696989 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
-		37C45E7F213AEA7E00696989 /* CLCNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCNormalViewController.swift; sourceTree = "<group>"; };
 		37C45E81213AEAB400696989 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		37C45E83213AEFAC00696989 /* CLCLazyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCLazyViewController.swift; sourceTree = "<group>"; };
 		37C45E85213AF1E800696989 /* LazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyCell.swift; sourceTree = "<group>"; };
 		37C45E87213AFB4300696989 /* SequentialLazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialLazyCell.swift; sourceTree = "<group>"; };
-		37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCSequentialLazyViewController.swift; sourceTree = "<group>"; };
 		37C45E8B213AFCB800696989 /* ImagedNibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagedNibCell.swift; sourceTree = "<group>"; };
-		37C45E8D213AFD3500696989 /* CLCImagedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCImagedViewController.swift; sourceTree = "<group>"; };
+		37C45E8D213AFD3500696989 /* CLCViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCViewControllers.swift; sourceTree = "<group>"; };
 		37EE578521396610007D1607 /* iOSPerformanceTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPerformanceTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EE578821396610007D1607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EE578A21396611007D1607 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -152,12 +144,8 @@
 			children = (
 				37C45E81213AEAB400696989 /* Content.swift */,
 				377F6CF0213EDBD6003738B1 /* Cells */,
-				37C45E7F213AEA7E00696989 /* CLCNormalViewController.swift */,
-				37C45E83213AEFAC00696989 /* CLCLazyViewController.swift */,
-				37C45E89213AFB7C00696989 /* CLCSequentialLazyViewController.swift */,
-				3797ED1E213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift */,
-				377F6CDE213ED053003738B1 /* CLCRunloopLazyViewController.swift */,
-				37C45E8D213AFD3500696989 /* CLCImagedViewController.swift */,
+				377F6CF1213EDC39003738B1 /* CLCBaseViewController.swift */,
+				37C45E8D213AFD3500696989 /* CLCViewControllers.swift */,
 			);
 			path = ComplexLayoutCell;
 			sourceTree = "<group>";
@@ -396,19 +384,15 @@
 				37EE579F21396692007D1607 /* SICNormalViewController.swift in Sources */,
 				37C45E82213AEAB400696989 /* Content.swift in Sources */,
 				377F6CEF213ED8FF003738B1 /* DrawrectSeparatorCell.swift in Sources */,
-				37C45E80213AEA7E00696989 /* CLCNormalViewController.swift in Sources */,
-				37C45E8E213AFD3500696989 /* CLCImagedViewController.swift in Sources */,
+				37C45E8E213AFD3500696989 /* CLCViewControllers.swift in Sources */,
 				37EE57AA21396C30007D1607 /* Util.swift in Sources */,
 				37EE578B21396611007D1607 /* HomeViewController.swift in Sources */,
 				37C45E8C213AFCB800696989 /* ImagedNibCell.swift in Sources */,
 				377F6CEB213ED525003738B1 /* CSLBaseViewController.swift in Sources */,
-				377F6CDF213ED053003738B1 /* CLCRunloopLazyViewController.swift in Sources */,
 				377F6CE8213ED463003738B1 /* CALayerSeparatorCell.swift in Sources */,
 				377F6CED213ED599003738B1 /* CSLViewControllers.swift in Sources */,
 				37F7699C213997FE0096D1AE /* LSENSStringSizeViewController.swift in Sources */,
 				37EE57A221396692007D1607 /* DelayedCell.swift in Sources */,
-				37C45E84213AEFAD00696989 /* CLCLazyViewController.swift in Sources */,
-				37C45E8A213AFB7C00696989 /* CLCSequentialLazyViewController.swift in Sources */,
 				37C45E86213AF1E800696989 /* LazyCell.swift in Sources */,
 				37EE57A121396692007D1607 /* SlowInitLabelCell.swift in Sources */,
 				37EE57AE21396C51007D1607 /* Icon.swift in Sources */,
@@ -422,9 +406,9 @@
 				37F769A02139A0C70096D1AE /* LSESizeThatFitsViewController.swift in Sources */,
 				37EE57A821396C0C007D1607 /* ImageCell.swift in Sources */,
 				37EE57A021396692007D1607 /* SICImagedViewController.swift in Sources */,
-				3797ED1F213B697E00C6FEE8 /* CLCDisplaySyncLazyViewController.swift in Sources */,
 				37F7699A2139976E0096D1AE /* TagLabelCell.swift in Sources */,
 				37EE578921396610007D1607 /* AppDelegate.swift in Sources */,
+				377F6CF2213EDC39003738B1 /* CLCBaseViewController.swift in Sources */,
 				37F7699721397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift in Sources */,
 				377F6CE3213ED3EE003738B1 /* UIViewSeparatorCell.swift in Sources */,
 				3797ED1D213B67C800C6FEE8 /* DisplaySyncLazyCell.swift in Sources */,
