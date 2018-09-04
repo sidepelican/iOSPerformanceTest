@@ -1,7 +1,7 @@
 import UIKit
 
 class CSLBaseViewController: LayoutMeasureCollectionViewConroller, UICollectionViewDelegateFlowLayout {
-    private let items: [Void] = (0..<300).map { _ in }
+    private let items: [Void] = (0..<500).map { _ in }
 
     init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
@@ -32,7 +32,7 @@ class CSLBaseViewController: LayoutMeasureCollectionViewConroller, UICollectionV
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: collectionView.bounds.width, height: 5)
+        return CGSize(width: collectionView.bounds.width, height: 3)
     }
 }
 

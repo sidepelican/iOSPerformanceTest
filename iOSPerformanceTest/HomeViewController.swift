@@ -51,6 +51,7 @@ class HomeViewController: UITableViewController {
             Section(headerTitle: "CellSeparatorLine", pages: [
                 Page.make(from: CSLUIViewViewController.self),
                 Page.make(from: CSLCALayerViewController.self),
+                Page.make(from: CSLDrawrectViewController.self),
             ]),
         ]
     }
