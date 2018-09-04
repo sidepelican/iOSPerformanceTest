@@ -48,6 +48,10 @@ class HomeViewController: UITableViewController {
                 Page.make(from: CLCRunloopLazyViewController.self),
                 Page.make(from: CLCImagedViewController.self),
             ]),
+            Section(headerTitle: "CellSeparatorLine", pages: [
+                Page.make(from: CSLUIViewViewController.self),
+                Page.make(from: CSLCALayerViewController.self),
+            ]),
         ]
     }
 

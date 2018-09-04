@@ -12,7 +12,7 @@ func startMeasure(_ file: String = #file, function: String = #function) -> Measu
     let completion = {
         let timeElapsed = (CFAbsoluteTimeGetCurrent() - startTime) * 1000
         let message = "\(identifier) \(timeElapsed) ms"
-        print(message)
+//        print(message)
         HUD.flash(.label(message), delay: delay)
     }
 
@@ -28,7 +28,7 @@ func measure(_ file: String = #file, function: String = #function, measureBlock:
 
     let timeElapsed = (CFAbsoluteTimeGetCurrent() - startTime) * 1000
     let message = "\(identifier) \(timeElapsed) ms"
-    print(message)
+//    print(message)
     HUD.flash(.label(message), delay: delay)
 }
 
