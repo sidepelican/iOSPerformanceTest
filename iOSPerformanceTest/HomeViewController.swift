@@ -54,6 +54,9 @@ class HomeViewController: UITableViewController {
                 Page.make(from: CSLCALayerViewController.self),
                 Page.make(from: CSLDrawrectViewController.self),
             ]),
+            Section(headerTitle: "MultilineJapaneseLabel", pages: [
+                Page.make(from: MLJNormalViewController.self),
+            ]),
         ]
     }
 

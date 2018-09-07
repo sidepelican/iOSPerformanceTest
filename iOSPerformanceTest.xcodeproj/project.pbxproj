@@ -46,6 +46,11 @@
 		37F7699E2139984E0096D1AE /* RandomWordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699D2139984E0096D1AE /* RandomWordGenerator.swift */; };
 		37F769A02139A0C70096D1AE /* LSESizeThatFitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */; };
 		37F769A22139A23F0096D1AE /* LSECacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F769A12139A23F0096D1AE /* LSECacheViewController.swift */; };
+		83F622002142843A00FC76E8 /* MLJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F621FF2142843A00FC76E8 /* MLJBaseViewController.swift */; };
+		83F622022142851D00FC76E8 /* JapaneseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F622012142851D00FC76E8 /* JapaneseContent.swift */; };
+		83F62205214288BB00FC76E8 /* JPContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F62203214288BB00FC76E8 /* JPContentCell.swift */; };
+		83F62206214288BB00FC76E8 /* JPContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F62204214288BB00FC76E8 /* JPContentCell.xib */; };
+		83F6220821428A3C00FC76E8 /* MLJViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F6220721428A3C00FC76E8 /* MLJViewControllers.swift */; };
 		93821EFE0B972627A8E18B20 /* Pods_iOSPerformanceTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +98,11 @@
 		37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSESizeThatFitsViewController.swift; sourceTree = "<group>"; };
 		37F769A12139A23F0096D1AE /* LSECacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSECacheViewController.swift; sourceTree = "<group>"; };
 		53A0CB7441921F5242B6D106 /* Pods-iOSPerformanceTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.debug.xcconfig"; sourceTree = "<group>"; };
+		83F621FF2142843A00FC76E8 /* MLJBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLJBaseViewController.swift; sourceTree = "<group>"; };
+		83F622012142851D00FC76E8 /* JapaneseContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseContent.swift; sourceTree = "<group>"; };
+		83F62203214288BB00FC76E8 /* JPContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPContentCell.swift; sourceTree = "<group>"; };
+		83F62204214288BB00FC76E8 /* JPContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JPContentCell.xib; sourceTree = "<group>"; };
+		83F6220721428A3C00FC76E8 /* MLJViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLJViewControllers.swift; sourceTree = "<group>"; };
 		A17C173C7B28BED0F75C65A3 /* Pods-iOSPerformanceTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.release.xcconfig"; sourceTree = "<group>"; };
 		B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPerformanceTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -238,6 +248,7 @@
 				37F769982139963A0096D1AE /* LabelSizeEstimates */,
 				37C45E7E213AEA3900696989 /* ComplexLayoutCell */,
 				377F6CE0213ED202003738B1 /* CellSeparatorLine */,
+				83F621FD214283F600FC76E8 /* MultilineJapaneseLabel */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -261,6 +272,26 @@
 				37F7699D2139984E0096D1AE /* RandomWordGenerator.swift */,
 			);
 			path = LabelSizeEstimates;
+			sourceTree = "<group>";
+		};
+		83F621FD214283F600FC76E8 /* MultilineJapaneseLabel */ = {
+			isa = PBXGroup;
+			children = (
+				83F622012142851D00FC76E8 /* JapaneseContent.swift */,
+				83F621FE2142842A00FC76E8 /* Cells */,
+				83F621FF2142843A00FC76E8 /* MLJBaseViewController.swift */,
+				83F6220721428A3C00FC76E8 /* MLJViewControllers.swift */,
+			);
+			path = MultilineJapaneseLabel;
+			sourceTree = "<group>";
+		};
+		83F621FE2142842A00FC76E8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				83F62203214288BB00FC76E8 /* JPContentCell.swift */,
+				83F62204214288BB00FC76E8 /* JPContentCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8F01E09185020AD7A4CE7C4B /* Pods */ = {
@@ -335,6 +366,7 @@
 				37EE579321396611007D1607 /* LaunchScreen.storyboard in Resources */,
 				37C45E7D213AE4A900696989 /* ContentCell.xib in Resources */,
 				37EE579021396611007D1607 /* Assets.xcassets in Resources */,
+				83F62206214288BB00FC76E8 /* JPContentCell.xib in Resources */,
 				37EE57B021396C57007D1607 /* icons.atlas in Resources */,
 				37EE578E21396611007D1607 /* Main.storyboard in Resources */,
 			);
@@ -400,9 +432,11 @@
 				377F6CEF213ED8FF003738B1 /* DrawrectSeparatorCell.swift in Sources */,
 				37C45E8E213AFD3500696989 /* CLCViewControllers.swift in Sources */,
 				3773FDFA21417B0200FB25A5 /* TextureContentsCell.swift in Sources */,
+				83F62205214288BB00FC76E8 /* JPContentCell.swift in Sources */,
 				37EE57AA21396C30007D1607 /* Util.swift in Sources */,
 				37EE578B21396611007D1607 /* HomeViewController.swift in Sources */,
 				37C45E8C213AFCB800696989 /* ImagedNibCell.swift in Sources */,
+				83F6220821428A3C00FC76E8 /* MLJViewControllers.swift in Sources */,
 				377F6CEB213ED525003738B1 /* CSLBaseViewController.swift in Sources */,
 				377F6CE8213ED463003738B1 /* CALayerSeparatorCell.swift in Sources */,
 				377F6CED213ED599003738B1 /* CSLViewControllers.swift in Sources */,
@@ -410,6 +444,7 @@
 				37EE57A221396692007D1607 /* DelayedCell.swift in Sources */,
 				37C45E86213AF1E800696989 /* LazyCell.swift in Sources */,
 				37EE57A121396692007D1607 /* SlowInitLabelCell.swift in Sources */,
+				83F622002142843A00FC76E8 /* MLJBaseViewController.swift in Sources */,
 				37EE57AE21396C51007D1607 /* Icon.swift in Sources */,
 				37F7699E2139984E0096D1AE /* RandomWordGenerator.swift in Sources */,
 				37C45E7C213AE4A900696989 /* ContentCell.swift in Sources */,
@@ -423,6 +458,7 @@
 				37EE57A021396692007D1607 /* SICImagedViewController.swift in Sources */,
 				37F7699A2139976E0096D1AE /* TagLabelCell.swift in Sources */,
 				37EE578921396610007D1607 /* AppDelegate.swift in Sources */,
+				83F622022142851D00FC76E8 /* JapaneseContent.swift in Sources */,
 				377F6CF2213EDC39003738B1 /* CLCBaseViewController.swift in Sources */,
 				37F7699721397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift in Sources */,
 				377F6CE3213ED3EE003738B1 /* UIViewSeparatorCell.swift in Sources */,

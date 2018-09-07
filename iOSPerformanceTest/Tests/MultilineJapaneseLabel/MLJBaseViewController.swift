@@ -1,8 +1,8 @@
 import UIKit
 
-private let staticItems = Content.makeContents()
+private let staticItems = JapaneseContent.makeContents()
 
-class CLCBaseViewController: LayoutMeasureCollectionViewConroller, UICollectionViewDelegateFlowLayout {
+class MLJBaseViewController: LayoutMeasureCollectionViewConroller, UICollectionViewDelegateFlowLayout {
     let items = staticItems
 
     init() {
@@ -28,11 +28,6 @@ class CLCBaseViewController: LayoutMeasureCollectionViewConroller, UICollectionV
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.row == 0 {
-            return CGSize(width: collectionView.bounds.width * 0.67, height: 160)
-        }
-
-        return CGSize(width: collectionView.bounds.width / 10 - 1, height: 70)
+        return CGSize(width: collectionView.bounds.width / 3 - 10, height: 140)
     }
 }
-
