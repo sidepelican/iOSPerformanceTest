@@ -56,6 +56,7 @@ class HomeViewController: UITableViewController {
             ]),
             Section(headerTitle: "MultilineJapaneseLabel", pages: [
                 Page.make(from: MLJNormalViewController.self),
+                Page.make(from: MLJStaticLabelHeightViewController.self),
             ]),
         ]
     }
