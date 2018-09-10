@@ -58,6 +58,9 @@ class HomeViewController: UITableViewController {
                 Page.make(from: MLJNormalViewController.self),
                 Page.make(from: MLJStaticLabelHeightViewController.self),
             ]),
+            Section(headerTitle: "CircleAvatarImage", pages: [
+                Page.make(from: CAINormalViewController.self),
+            ]),
         ]
     }
 
