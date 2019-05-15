@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373B50C3228C663B00F6B995 /* DispatchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373B50C2228C663B00F6B995 /* DispatchTest.swift */; };
 		3773FDFA21417B0200FB25A5 /* TextureContentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773FDF921417B0200FB25A5 /* TextureContentsCell.swift */; };
 		3773FDFC21417B0F00FB25A5 /* CLCTextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773FDFB21417B0F00FB25A5 /* CLCTextureViewController.swift */; };
 		377F6CDD213ECE4C003738B1 /* RunloopLazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CDC213ECE4C003738B1 /* RunloopLazyCell.swift */; };
@@ -59,7 +60,20 @@
 		93821EFE0B972627A8E18B20 /* Pods_iOSPerformanceTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		373B50BD228C663000F6B995 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37EE577D21396610007D1607 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37EE578421396610007D1607;
+			remoteInfo = iOSPerformanceTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		373B50B8228C663000F6B995 /* iOSPerformanceTestUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPerformanceTestUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		373B50BC228C663000F6B995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373B50C2228C663B00F6B995 /* DispatchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTest.swift; sourceTree = "<group>"; };
 		3773FDF921417B0200FB25A5 /* TextureContentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureContentsCell.swift; sourceTree = "<group>"; };
 		3773FDFB21417B0F00FB25A5 /* CLCTextureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCTextureViewController.swift; sourceTree = "<group>"; };
 		377F6CDC213ECE4C003738B1 /* RunloopLazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunloopLazyCell.swift; sourceTree = "<group>"; };
@@ -118,6 +132,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		373B50B5228C663000F6B995 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37EE578221396610007D1607 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +150,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373B50B9228C663000F6B995 /* iOSPerformanceTestUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				373B50C2228C663B00F6B995 /* DispatchTest.swift */,
+				373B50BC228C663000F6B995 /* Info.plist */,
+			);
+			path = iOSPerformanceTestUnitTests;
+			sourceTree = "<group>";
+		};
 		377F6CE0213ED202003738B1 /* CellSeparatorLine */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				37EE578721396610007D1607 /* iOSPerformanceTest */,
+				373B50B9228C663000F6B995 /* iOSPerformanceTestUnitTests */,
 				37EE578621396610007D1607 /* Products */,
 				37EE57B121396E2D007D1607 /* Frameworks */,
 				8F01E09185020AD7A4CE7C4B /* Pods */,
@@ -208,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				37EE578521396610007D1607 /* iOSPerformanceTest.app */,
+				373B50B8228C663000F6B995 /* iOSPerformanceTestUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,6 +369,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		373B50B7228C663000F6B995 /* iOSPerformanceTestUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373B50C1228C663000F6B995 /* Build configuration list for PBXNativeTarget "iOSPerformanceTestUnitTests" */;
+			buildPhases = (
+				373B50B4228C663000F6B995 /* Sources */,
+				373B50B5228C663000F6B995 /* Frameworks */,
+				373B50B6228C663000F6B995 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373B50BE228C663000F6B995 /* PBXTargetDependency */,
+			);
+			name = iOSPerformanceTestUnitTests;
+			productName = iOSPerformanceTestUnitTests;
+			productReference = 373B50B8228C663000F6B995 /* iOSPerformanceTestUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		37EE578421396610007D1607 /* iOSPerformanceTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37EE579721396611007D1607 /* Build configuration list for PBXNativeTarget "iOSPerformanceTest" */;
@@ -362,10 +412,14 @@
 		37EE577D21396610007D1607 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = kenta;
 				TargetAttributes = {
+					373B50B7228C663000F6B995 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 37EE578421396610007D1607;
+					};
 					37EE578421396610007D1607 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -385,11 +439,19 @@
 			projectRoot = "";
 			targets = (
 				37EE578421396610007D1607 /* iOSPerformanceTest */,
+				373B50B7228C663000F6B995 /* iOSPerformanceTestUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		373B50B6228C663000F6B995 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37EE578321396610007D1607 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -454,6 +516,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		373B50B4228C663000F6B995 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373B50C3228C663B00F6B995 /* DispatchTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37EE578121396610007D1607 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -505,6 +575,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		373B50BE228C663000F6B995 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37EE578421396610007D1607 /* iOSPerformanceTest */;
+			targetProxy = 373B50BD228C663000F6B995 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		37EE578C21396611007D1607 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -525,6 +603,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		373B50BF228C663000F6B995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3M694BK62;
+				INFOPLIST_FILE = iOSPerformanceTestUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.side.junktown.iOSPerformanceTestUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSPerformanceTest.app/iOSPerformanceTest";
+			};
+			name = Debug;
+		};
+		373B50C0228C663000F6B995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3M694BK62;
+				INFOPLIST_FILE = iOSPerformanceTestUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.side.junktown.iOSPerformanceTestUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSPerformanceTest.app/iOSPerformanceTest";
+			};
+			name = Release;
+		};
 		37EE579521396611007D1607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -644,6 +767,7 @@
 			baseConfigurationReference = 53A0CB7441921F5242B6D106 /* Pods-iOSPerformanceTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = R3M694BK62;
@@ -655,6 +779,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.side.junktown.iOSPerformanceTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -665,6 +790,7 @@
 			baseConfigurationReference = A17C173C7B28BED0F75C65A3 /* Pods-iOSPerformanceTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = R3M694BK62;
@@ -675,6 +801,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.side.junktown.iOSPerformanceTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -683,6 +810,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		373B50C1228C663000F6B995 /* Build configuration list for PBXNativeTarget "iOSPerformanceTestUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373B50BF228C663000F6B995 /* Debug */,
+				373B50C0228C663000F6B995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37EE578021396610007D1607 /* Build configuration list for PBXProject "iOSPerformanceTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
