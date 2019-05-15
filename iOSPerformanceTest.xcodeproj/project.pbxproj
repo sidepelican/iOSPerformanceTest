@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373B50C3228C663B00F6B995 /* DispatchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373B50C2228C663B00F6B995 /* DispatchTest.swift */; };
+		373B50C5228C6F4C00F6B995 /* ExistentialTypeArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373B50C4228C6F4C00F6B995 /* ExistentialTypeArrayTest.swift */; };
 		3773FDFA21417B0200FB25A5 /* TextureContentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773FDF921417B0200FB25A5 /* TextureContentsCell.swift */; };
 		3773FDFC21417B0F00FB25A5 /* CLCTextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773FDFB21417B0F00FB25A5 /* CLCTextureViewController.swift */; };
 		377F6CDD213ECE4C003738B1 /* RunloopLazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6CDC213ECE4C003738B1 /* RunloopLazyCell.swift */; };
@@ -74,6 +75,7 @@
 		373B50B8228C663000F6B995 /* iOSPerformanceTestUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPerformanceTestUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		373B50BC228C663000F6B995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373B50C2228C663B00F6B995 /* DispatchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTest.swift; sourceTree = "<group>"; };
+		373B50C4228C6F4C00F6B995 /* ExistentialTypeArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistentialTypeArrayTest.swift; sourceTree = "<group>"; };
 		3773FDF921417B0200FB25A5 /* TextureContentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureContentsCell.swift; sourceTree = "<group>"; };
 		3773FDFB21417B0F00FB25A5 /* CLCTextureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCTextureViewController.swift; sourceTree = "<group>"; };
 		377F6CDC213ECE4C003738B1 /* RunloopLazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunloopLazyCell.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				373B50C2228C663B00F6B995 /* DispatchTest.swift */,
+				373B50C4228C6F4C00F6B995 /* ExistentialTypeArrayTest.swift */,
 				373B50BC228C663000F6B995 /* Info.plist */,
 			);
 			path = iOSPerformanceTestUnitTests;
@@ -520,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373B50C5228C6F4C00F6B995 /* ExistentialTypeArrayTest.swift in Sources */,
 				373B50C3228C663B00F6B995 /* DispatchTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
