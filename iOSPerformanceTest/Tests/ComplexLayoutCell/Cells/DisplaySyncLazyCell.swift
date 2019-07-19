@@ -17,7 +17,7 @@ private final class LayoutScheduler {
 
     private init() {
         let l = CADisplayLink(target: self, selector: #selector(link))
-        l.add(to: .main, forMode: .commonModes)
+        l.add(to: .main, forMode: .common)
     }
 
     @objc private func link(_ link: CADisplayLink) {

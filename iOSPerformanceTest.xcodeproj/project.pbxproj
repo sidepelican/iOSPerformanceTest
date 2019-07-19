@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,7 +58,7 @@
 		83F62205214288BB00FC76E8 /* JPContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F62203214288BB00FC76E8 /* JPContentCell.swift */; };
 		83F62206214288BB00FC76E8 /* JPContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F62204214288BB00FC76E8 /* JPContentCell.xib */; };
 		83F6220821428A3C00FC76E8 /* MLJViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F6220721428A3C00FC76E8 /* MLJViewControllers.swift */; };
-		93821EFE0B972627A8E18B20 /* Pods_iOSPerformanceTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */; };
+		A50404B2AA1FAD1572235369 /* Pods_iOSPerformanceTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE690FF314A94B953AF60994 /* Pods_iOSPerformanceTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,7 +130,7 @@
 		83F62204214288BB00FC76E8 /* JPContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JPContentCell.xib; sourceTree = "<group>"; };
 		83F6220721428A3C00FC76E8 /* MLJViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLJViewControllers.swift; sourceTree = "<group>"; };
 		A17C173C7B28BED0F75C65A3 /* Pods-iOSPerformanceTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.release.xcconfig"; sourceTree = "<group>"; };
-		B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPerformanceTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE690FF314A94B953AF60994 /* Pods_iOSPerformanceTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPerformanceTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93821EFE0B972627A8E18B20 /* Pods_iOSPerformanceTest.framework in Frameworks */,
+				A50404B2AA1FAD1572235369 /* Pods_iOSPerformanceTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				37EE57B221396E2D007D1607 /* SpriteKit.framework */,
-				B449B7DBF310054A3CC6E2CD /* Pods_iOSPerformanceTest.framework */,
+				EE690FF314A94B953AF60994 /* Pods_iOSPerformanceTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -398,7 +398,7 @@
 				37EE578121396610007D1607 /* Sources */,
 				37EE578221396610007D1607 /* Frameworks */,
 				37EE578321396610007D1607 /* Resources */,
-				24430269CB6011EC60F4B4BB /* [CP] Embed Pods Frameworks */,
+				58FE4B3D5AB8F957330B455E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -472,7 +472,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24430269CB6011EC60F4B4BB /* [CP] Embed Pods Frameworks */ = {
+		58FE4B3D5AB8F957330B455E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -775,7 +775,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.side.junktown.iOSPerformanceTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -797,7 +797,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.side.junktown.iOSPerformanceTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
