@@ -53,6 +53,10 @@
 		37F7699E2139984E0096D1AE /* RandomWordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699D2139984E0096D1AE /* RandomWordGenerator.swift */; };
 		37F769A02139A0C70096D1AE /* LSESizeThatFitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */; };
 		37F769A22139A23F0096D1AE /* LSECacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F769A12139A23F0096D1AE /* LSECacheViewController.swift */; };
+		8391BFB122E1AB6600118DCA /* RBBImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391BFB022E1AB6600118DCA /* RBBImageViewController.swift */; };
+		8391BFB422E1ABFF00118DCA /* RBBImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391BFB322E1ABFF00118DCA /* RBBImageCell.swift */; };
+		8391BFB622E1AFFB00118DCA /* RBBLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391BFB522E1AFFB00118DCA /* RBBLayerViewController.swift */; };
+		8391BFB822E1B01300118DCA /* RBBLayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391BFB722E1B01300118DCA /* RBBLayerCell.swift */; };
 		83F622002142843A00FC76E8 /* MLJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F621FF2142843A00FC76E8 /* MLJBaseViewController.swift */; };
 		83F622022142851D00FC76E8 /* JapaneseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F622012142851D00FC76E8 /* JapaneseContent.swift */; };
 		83F62205214288BB00FC76E8 /* JPContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F62203214288BB00FC76E8 /* JPContentCell.swift */; };
@@ -124,6 +128,10 @@
 		37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSESizeThatFitsViewController.swift; sourceTree = "<group>"; };
 		37F769A12139A23F0096D1AE /* LSECacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSECacheViewController.swift; sourceTree = "<group>"; };
 		53A0CB7441921F5242B6D106 /* Pods-iOSPerformanceTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.debug.xcconfig"; sourceTree = "<group>"; };
+		8391BFB022E1AB6600118DCA /* RBBImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBImageViewController.swift; sourceTree = "<group>"; };
+		8391BFB322E1ABFF00118DCA /* RBBImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBImageCell.swift; sourceTree = "<group>"; };
+		8391BFB522E1AFFB00118DCA /* RBBLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBLayerViewController.swift; sourceTree = "<group>"; };
+		8391BFB722E1B01300118DCA /* RBBLayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBLayerCell.swift; sourceTree = "<group>"; };
 		83F621FF2142843A00FC76E8 /* MLJBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLJBaseViewController.swift; sourceTree = "<group>"; };
 		83F622012142851D00FC76E8 /* JapaneseContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseContent.swift; sourceTree = "<group>"; };
 		83F62203214288BB00FC76E8 /* JPContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPContentCell.swift; sourceTree = "<group>"; };
@@ -313,6 +321,7 @@
 				377F6CE0213ED202003738B1 /* CellSeparatorLine */,
 				83F621FD214283F600FC76E8 /* MultilineJapaneseLabel */,
 				37AE2975214601A50051F165 /* CircleAvatarImage */,
+				8391BFAF22E1A7D900118DCA /* RoundedBackgroundButton */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -336,6 +345,25 @@
 				37F7699D2139984E0096D1AE /* RandomWordGenerator.swift */,
 			);
 			path = LabelSizeEstimates;
+			sourceTree = "<group>";
+		};
+		8391BFAF22E1A7D900118DCA /* RoundedBackgroundButton */ = {
+			isa = PBXGroup;
+			children = (
+				8391BFB222E1ABDA00118DCA /* Cells */,
+				8391BFB022E1AB6600118DCA /* RBBImageViewController.swift */,
+				8391BFB522E1AFFB00118DCA /* RBBLayerViewController.swift */,
+			);
+			path = RoundedBackgroundButton;
+			sourceTree = "<group>";
+		};
+		8391BFB222E1ABDA00118DCA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8391BFB322E1ABFF00118DCA /* RBBImageCell.swift */,
+				8391BFB722E1B01300118DCA /* RBBLayerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		83F621FD214283F600FC76E8 /* MultilineJapaneseLabel */ = {
@@ -525,6 +553,7 @@
 			files = (
 				37EE57AC21396C4A007D1607 /* LSINormalViewController.swift in Sources */,
 				37EE579F21396692007D1607 /* SICNormalViewController.swift in Sources */,
+				8391BFB622E1AFFB00118DCA /* RBBLayerViewController.swift in Sources */,
 				37C45E82213AEAB400696989 /* Content.swift in Sources */,
 				377F6CEF213ED8FF003738B1 /* DrawrectSeparatorCell.swift in Sources */,
 				37C45E8E213AFD3500696989 /* CLCViewControllers.swift in Sources */,
@@ -554,12 +583,15 @@
 				37EE57A521396BEC007D1607 /* LSITextureAtlasViewController.swift in Sources */,
 				377F6CDD213ECE4C003738B1 /* RunloopLazyCell.swift in Sources */,
 				37F769A02139A0C70096D1AE /* LSESizeThatFitsViewController.swift in Sources */,
+				8391BFB822E1B01300118DCA /* RBBLayerCell.swift in Sources */,
 				37EE57A821396C0C007D1607 /* ImageCell.swift in Sources */,
 				37EE57A021396692007D1607 /* SICImagedViewController.swift in Sources */,
 				37F7699A2139976E0096D1AE /* TagLabelCell.swift in Sources */,
 				37EE578921396610007D1607 /* AppDelegate.swift in Sources */,
 				83F622022142851D00FC76E8 /* JapaneseContent.swift in Sources */,
 				377F6CF2213EDC39003738B1 /* CLCBaseViewController.swift in Sources */,
+				8391BFB122E1AB6600118DCA /* RBBImageViewController.swift in Sources */,
+				8391BFB422E1ABFF00118DCA /* RBBImageCell.swift in Sources */,
 				3785EBD9214410FF0010C9B1 /* StaticLabelHeightJPContentCell.swift in Sources */,
 				37F7699721397C8C0096D1AE /* LayoutMeasureCollectionViewConroller.swift in Sources */,
 				377F6CE3213ED3EE003738B1 /* UIViewSeparatorCell.swift in Sources */,
@@ -765,7 +797,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = R3M694BK62;
+				DEVELOPMENT_TEAM = S9BZP4GDF3;
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = iOSPerformanceTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -788,7 +820,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = R3M694BK62;
+				DEVELOPMENT_TEAM = S9BZP4GDF3;
 				INFOPLIST_FILE = iOSPerformanceTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

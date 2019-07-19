@@ -61,6 +61,10 @@ class HomeViewController: UITableViewController {
             Section(headerTitle: "CircleAvatarImage", pages: [
                 Page.make(from: CAINormalViewController.self),
             ]),
+            Section(headerTitle: "RoundedBackgroundButton", pages: [
+                Page.make(from: RBBImageViewController.self),
+                Page.make(from: RBBLayerViewController.self),
+            ]),
         ]
     }
 
