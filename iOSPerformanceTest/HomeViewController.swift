@@ -64,6 +64,7 @@ class HomeViewController: UITableViewController {
             Section(headerTitle: "RoundedBackgroundButton", pages: [
                 Page.make(from: RBBImageViewController.self),
                 Page.make(from: RBBLayerViewController.self),
+                Page.make(from: RBBAssetImageViewController.self),
             ]),
         ]
     }

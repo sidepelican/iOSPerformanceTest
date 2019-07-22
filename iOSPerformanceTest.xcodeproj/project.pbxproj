@@ -53,6 +53,8 @@
 		37F7699E2139984E0096D1AE /* RandomWordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699D2139984E0096D1AE /* RandomWordGenerator.swift */; };
 		37F769A02139A0C70096D1AE /* LSESizeThatFitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */; };
 		37F769A22139A23F0096D1AE /* LSECacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F769A12139A23F0096D1AE /* LSECacheViewController.swift */; };
+		8301CA4722E5C50600FDF040 /* RBBAssetImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CA4622E5C50600FDF040 /* RBBAssetImageCell.swift */; };
+		8301CA4922E5C59900FDF040 /* RBBAssetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8301CA4822E5C59900FDF040 /* RBBAssetImageViewController.swift */; };
 		8391BFB122E1AB6600118DCA /* RBBImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391BFB022E1AB6600118DCA /* RBBImageViewController.swift */; };
 		8391BFB422E1ABFF00118DCA /* RBBImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391BFB322E1ABFF00118DCA /* RBBImageCell.swift */; };
 		8391BFB622E1AFFB00118DCA /* RBBLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391BFB522E1AFFB00118DCA /* RBBLayerViewController.swift */; };
@@ -128,6 +130,8 @@
 		37F7699F2139A0C70096D1AE /* LSESizeThatFitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSESizeThatFitsViewController.swift; sourceTree = "<group>"; };
 		37F769A12139A23F0096D1AE /* LSECacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSECacheViewController.swift; sourceTree = "<group>"; };
 		53A0CB7441921F5242B6D106 /* Pods-iOSPerformanceTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPerformanceTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPerformanceTest/Pods-iOSPerformanceTest.debug.xcconfig"; sourceTree = "<group>"; };
+		8301CA4622E5C50600FDF040 /* RBBAssetImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBAssetImageCell.swift; sourceTree = "<group>"; };
+		8301CA4822E5C59900FDF040 /* RBBAssetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBAssetImageViewController.swift; sourceTree = "<group>"; };
 		8391BFB022E1AB6600118DCA /* RBBImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBImageViewController.swift; sourceTree = "<group>"; };
 		8391BFB322E1ABFF00118DCA /* RBBImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBImageCell.swift; sourceTree = "<group>"; };
 		8391BFB522E1AFFB00118DCA /* RBBLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBBLayerViewController.swift; sourceTree = "<group>"; };
@@ -353,6 +357,7 @@
 				8391BFB222E1ABDA00118DCA /* Cells */,
 				8391BFB022E1AB6600118DCA /* RBBImageViewController.swift */,
 				8391BFB522E1AFFB00118DCA /* RBBLayerViewController.swift */,
+				8301CA4822E5C59900FDF040 /* RBBAssetImageViewController.swift */,
 			);
 			path = RoundedBackgroundButton;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			children = (
 				8391BFB322E1ABFF00118DCA /* RBBImageCell.swift */,
 				8391BFB722E1B01300118DCA /* RBBLayerCell.swift */,
+				8301CA4622E5C50600FDF040 /* RBBAssetImageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -552,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37EE57AC21396C4A007D1607 /* LSINormalViewController.swift in Sources */,
+				8301CA4722E5C50600FDF040 /* RBBAssetImageCell.swift in Sources */,
 				37EE579F21396692007D1607 /* SICNormalViewController.swift in Sources */,
 				8391BFB622E1AFFB00118DCA /* RBBLayerViewController.swift in Sources */,
 				37C45E82213AEAB400696989 /* Content.swift in Sources */,
@@ -562,6 +569,7 @@
 				83F62205214288BB00FC76E8 /* JPContentCell.swift in Sources */,
 				37EE57AA21396C30007D1607 /* Util.swift in Sources */,
 				37EE578B21396611007D1607 /* HomeViewController.swift in Sources */,
+				8301CA4922E5C59900FDF040 /* RBBAssetImageViewController.swift in Sources */,
 				37C45E8C213AFCB800696989 /* ImagedNibCell.swift in Sources */,
 				83F6220821428A3C00FC76E8 /* MLJViewControllers.swift in Sources */,
 				377F6CEB213ED525003738B1 /* CSLBaseViewController.swift in Sources */,
