@@ -15,6 +15,7 @@ class ViewController: UITabBarController {
         setViewControllers([
             TestViewController<MyCellA>(),
             TestViewController<MyCellB>(),
+            TestViewController<MyCellC>(),
         ], animated: false)
     }
 }

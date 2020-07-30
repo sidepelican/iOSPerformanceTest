@@ -59,7 +59,7 @@ final class TestViewController<Cell: TestCellProtocol>: UIViewController, UIColl
             var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
             snapshot.appendSections([1])
             snapshot.appendItems(Set(emojis.map(String.init)).shuffled(), toSection: 1)
-            dataSource.apply(snapshot)
+            dataSource.apply(snapshot, animatingDifferences: false)
         }
     }
 
