@@ -13,14 +13,14 @@
       "idiom" : "universal",
       "resizing" : {
         "cap-insets" : {
-          "bottom" : 66,
-          "left" : 66,
-          "right" : 66,
-          "top" : 66
+          "bottom" : 48,
+          "left" : 48,
+          "right" : 48,
+          "top" : 48
         },
         "center" : {
           "height" : 1,
-          "mode" : "stretch",
+          "mode" : "tile",
           "width" : 1
         },
         "mode" : "9-part"

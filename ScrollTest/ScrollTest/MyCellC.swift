@@ -10,17 +10,12 @@ final class MyCellC: UICollectionViewCell, TestCellProtocol {
 
         contentView.addSubview(background)
         background.translatesAutoresizingMaskIntoConstraints = false
-        background.pinEdgesToSuperView(inset: -10)
+        background.pinEdgesToSuperView(inset: -4)
 
         contentView.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.pinEdgesToSuperView()
         label.textAlignment = .center
-
-        label.backgroundColor = .lightGray
-
-        label.layer.cornerRadius = 12
-        label.clipsToBounds = true
     }
 
     required init?(coder: NSCoder) {
