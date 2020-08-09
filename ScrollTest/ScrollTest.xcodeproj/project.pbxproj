@@ -16,6 +16,7 @@
 		37A9089924B04BB800B9CE03 /* ScrollTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9089824B04BB800B9CE03 /* ScrollTestUITests.swift */; };
 		37A908A724B04C7F00B9CE03 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A908A624B04C7F00B9CE03 /* TestViewController.swift */; };
 		37A908A924B0508C00B9CE03 /* MyCellA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A908A824B0508C00B9CE03 /* MyCellA.swift */; };
+		8380FAB024DFA8B9001736C7 /* MyCellD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8380FAAF24DFA8B9001736C7 /* MyCellD.swift */; };
 		83B1EEF424D2DAD200652D5A /* MyCellB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1EEF324D2DAD200652D5A /* MyCellB.swift */; };
 		83B1EEF624D2DB3900652D5A /* MyCellC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1EEF524D2DB3900652D5A /* MyCellC.swift */; };
 		83B1EEF824D2E79400652D5A /* AutoLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1EEF724D2E79400652D5A /* AutoLayoutHelper.swift */; };
@@ -46,6 +47,7 @@
 		37A908A624B04C7F00B9CE03 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		37A908A824B0508C00B9CE03 /* MyCellA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellA.swift; sourceTree = "<group>"; };
 		37A908AA24B06D3100B9CE03 /* ScrollTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScrollTest.entitlements; sourceTree = "<group>"; };
+		8380FAAF24DFA8B9001736C7 /* MyCellD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellD.swift; sourceTree = "<group>"; };
 		83B1EEF324D2DAD200652D5A /* MyCellB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellB.swift; sourceTree = "<group>"; };
 		83B1EEF524D2DB3900652D5A /* MyCellC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellC.swift; sourceTree = "<group>"; };
 		83B1EEF724D2E79400652D5A /* AutoLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutHelper.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				37A908A824B0508C00B9CE03 /* MyCellA.swift */,
 				83B1EEF324D2DAD200652D5A /* MyCellB.swift */,
 				83B1EEF524D2DB3900652D5A /* MyCellC.swift */,
+				8380FAAF24DFA8B9001736C7 /* MyCellD.swift */,
 				37A9087C24B04BB700B9CE03 /* Main.storyboard */,
 				37A9087F24B04BB800B9CE03 /* Assets.xcassets */,
 				37A9088124B04BB800B9CE03 /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8380FAB024DFA8B9001736C7 /* MyCellD.swift in Sources */,
 				83B1EEF824D2E79400652D5A /* AutoLayoutHelper.swift in Sources */,
 				83B1EEF424D2DAD200652D5A /* MyCellB.swift in Sources */,
 				37A908A724B04C7F00B9CE03 /* TestViewController.swift in Sources */,

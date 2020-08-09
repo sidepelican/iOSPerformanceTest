@@ -16,6 +16,7 @@ class ViewController: UITabBarController {
             TestViewController<MyCellA>(),
             TestViewController<MyCellB>(),
             TestViewController<MyCellC>(),
+            TestViewController<MyCellD>(),
         ], animated: false)
     }
 }

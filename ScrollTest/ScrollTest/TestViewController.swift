@@ -1,5 +1,4 @@
 import MetricKit
-import OSLog
 import os
 import UIKit
 
